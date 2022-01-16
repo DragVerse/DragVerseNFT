@@ -27,8 +27,6 @@ const App = (props) => {
       <div style={DragVerseTheme}>
         {console.log(props)}
         <Navigation/>
-        {currentUser ? (
-          <>
             <Route exact path={ROUTES.LANDING} component={Dashboard} />
             <Route exact path={ROUTES.HOME} component={ProfilePage} />
             <Route exact path={ROUTES.AVATAR} component={AvatarPage} />
@@ -37,13 +35,9 @@ const App = (props) => {
             <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
             <Route
                 exact
-              path={ROUTES.PASSWORD_FORGET}
-              component={PasswordForgetPage}
+                path={ROUTES.PASSWORD_FORGET}
+                component={PasswordForgetPage}
             />
-          </>
-        ) : (
-          <Redirect to="/signup" />
-        )}
       </div>
     </Router>
   );

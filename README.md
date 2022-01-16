@@ -36,30 +36,30 @@ yarn setup
 
 ```bash
 
-NEXT_PUBLIC_APP_TITLE=[default app title]
-NEXT_PUBLIC_DEFAULT_DESCRIPTION=[default meta description]
+REACT_APP_APP_TITLE=[default app title]
+REACT_APP_DEFAULT_DESCRIPTION=[default meta description]
 
 # Erc721 Contracts you would like to work with, you may use multiple seperated buy commas.
-NEXT_PUBLIC_MAINNET_CONTRACTS=0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7
-NEXT_PUBLIC_TESTNET_CONTRACTS=0x7C2668BD0D3c050703CEcC956C11Bd520c26f7d4
+REACT_APP_MAINNET_CONTRACTS=0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7
+REACT_APP_TESTNET_CONTRACTS=0x7C2668BD0D3c050703CEcC956C11Bd520c26f7d4
 
 # NETWORK ID: 1 for Ethereum Mainnet / 4 for Rinkeby Testnet
-NEXT_PUBLIC_NETWORK_ID=4
+REACT_APP_NETWORK_ID=4
 
 # OPTIONAL, use instead of NFT Contract to show NFTs associated with a user's address.
-NEXT_PUBLIC_CURATORS_ID=[The address of a curator or creator]
+REACT_APP_CURATORS_ID=[The address of a curator or creator]
 
 # OPTIONAL - Best to set in deployment
-NEXT_PUBLIC_BASE_URL=[production-url]
+REACT_APP_BASE_URL=[production-url]
 
 ## configured RPC_URL (mainnet/rinkeby depending on NETWORK_ID) for walletconnect 
 ## ~ Keep this private in a .env.local file. And configure directly in vercel for production.
-NEXT_PUBLIC_RPC_URL=[address to web3 rpc url provider]
+REACT_APP_RPC_URL=[address to web3 rpc url provider]
 
 ```
 
 If you include a rpcUrl on the manage auction hooks provider it enables walletconnect,
-without that rpcUrl walletconnect will not work work. We have set included and .env variable for this: ```NEXT_PUBLIC_RPC_URL```. [Further reading on RPC providers](https://web3py.readthedocs.io/en/stable/providers.html) / [Alchemy Ethereum API Docs](https://docs.alchemy.com/alchemy/documentation/apis/ethereum).
+without that rpcUrl walletconnect will not work work. We have set included and .env variable for this: ```REACT_APP_RPC_URL```. [Further reading on RPC providers](https://web3py.readthedocs.io/en/stable/providers.html) / [Alchemy Ethereum API Docs](https://docs.alchemy.com/alchemy/documentation/apis/ethereum).
 
 ## Develop
 
@@ -81,7 +81,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Or click the button below:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fourzora%2Fcreate-auction-house&env=NEXT_PUBLIC_APP_TITLE,NEXT_PUBLIC_BASE_URL,NEXT_PUBLIC_NETWORK,NEXT_PUBLIC_CURATORS_ID&envDescription=Curator%20ID%20%26%20Network&envLink=https%3A%2F%2Fgithub.com%2Fourzora%2Fauction-house%23curators&project-name=our-auction-house&repo-name=our-auction-house&redirect-url=https%3A%2F%2Fcreate-auction-house.vercel.app)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fourzora%2Fcreate-auction-house&env=REACT_APP_APP_TITLE,REACT_APP_BASE_URL,REACT_APP_NETWORK,REACT_APP_CURATORS_ID&envDescription=Curator%20ID%20%26%20Network&envLink=https%3A%2F%2Fgithub.com%2Fourzora%2Fauction-house%23curators&project-name=our-auction-house&repo-name=our-auction-house&redirect-url=https%3A%2F%2Fcreate-auction-house.vercel.app)
 
 ...Don't forget to add the necessary environment variables!
 
